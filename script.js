@@ -1,16 +1,23 @@
 const container = document.querySelector("#container");
 
-const myDiv = document.createElement("div");
-
-const myDiv2 = document.createElement("div");
 
 
+let numberOfGrids = 16;
 
-
-
-myDiv.innerHTML = "POOP";
-myDiv.style.cssText = "display: inline-block";
-myDiv2.innerHTML = "POOP";
-myDiv2.style.cssText = "display: inline-block";
-container.appendChild(myDiv);
-container.appendChild(myDiv2);
+let arrayDiv = new Array();
+let horizArrayDiv = new Array();
+container.style.cssText = "display: flex;"
+for (let i = 0; i <= 16; i++)
+{
+    arrayDiv[i] = document.createElement("div");
+    arrayDiv[i].innerHTML = "SHIT";
+    arrayDiv[i].style.cssText = "flex: 1;";
+    container.appendChild(arrayDiv[i]);
+    for (let j= 0; j<= 16; j++)
+    {
+        horizArrayDiv[j] = document.createElement("div");
+        horizArrayDiv[j].innerHTML = "poop";
+        horizArrayDiv[j].style.cssText = "display: ";
+        arrayDiv[i].appendChild(horizArrayDiv[j]);
+    }
+}
